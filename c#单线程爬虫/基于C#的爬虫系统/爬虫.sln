@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 2012
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "爬虫", "爬虫\爬虫.csproj", "{65012259-BE9B-4BA5-936F-32D325CBB61B}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = ".nuget", ".nuget", "{376B917D-5CC5-48A1-B8C8-0966B69B3B0E}"
+	ProjectSection(SolutionItems) = preProject
+		.nuget\packages.config = .nuget\packages.config
+	EndProjectSection
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{65012259-BE9B-4BA5-936F-32D325CBB61B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{65012259-BE9B-4BA5-936F-32D325CBB61B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{65012259-BE9B-4BA5-936F-32D325CBB61B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{65012259-BE9B-4BA5-936F-32D325CBB61B}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

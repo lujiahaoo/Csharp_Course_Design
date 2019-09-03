@@ -1,0 +1,59 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head runat="server">
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    <title></title>
+        <script src="./bin/Debug/echarts.min.js"></script>
+        <script src="./bin/Debug/json2.js"></script>
+</head>
+  <body>
+    <div style="text-align:center;">
+        <button onclick="showData()" style="width: 120px;height: 40px">查看榜单</button>
+    </div>
+
+
+     <div id="main" style="width: 1002px;height:549px;"></div>
+     <script type="text/javascript">
+        function showData()
+        {
+        var name=window.external.GetData();
+        var number=window.external.GetNum();
+        var namearray=name.split(",");
+        var numberar=number.split(",");      
+        var result = JSON.parse('[' + number+ ']');//String(numberar)：输出数组的每个元素值，用逗号分隔；
+
+
+        var myChart = echarts.init(document.getElementById('main'));
+         // 指定图表的配置项和数据
+        var option = {
+             title: {
+                 text: '热门歌单TOP10'
+             },
+            tooltip: {},
+           legend: {
+                data:['收听次数']
+            },
+           xAxis: { 
+                        axisLabel:{
+                    interval:0,
+                    rotate: -20,
+                    formatter: function(name){
+                    return name.length>7?name.substr(0,6)+"...":name;
+                                            }
+                                  },
+                data: namearray
+             },
+            yAxis: {},
+             series: [{
+                name: '收听次数',
+               type: 'bar',
+                data: result
+             }]
+        };
+
+       // 使用刚指定的配置项和数据显示图表。
+        myChart.setOption(option);
+        }
+    </script>
+ </body>
+</html>
